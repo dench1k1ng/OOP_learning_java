@@ -7,6 +7,8 @@ public class Solution_9 {
         int[][] matrix = new int[10][];
         for (int i = 0; i < 10; i++) {
             System.out.println(matrix[i]);;
+            matrix[i] = new int[10];
+            //fsjklfjlsdjfkdsjklfj
         }
     }
 }
