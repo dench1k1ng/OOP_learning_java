@@ -1,5 +1,6 @@
 package Assignment_1_2;
 
+import java.net.SocketOption;
 import java.util.Scanner;
 
 public class Task_6 {
@@ -9,12 +10,21 @@ public class Task_6 {
         System.out.println("Start of loop");
         while (true) {
             System.out.print("Enter: ");
-            String s = sc.nextLine();
-            if (s.equals("ENTER")) {
-                System.out.println("It is end, the sum is " + sum);
-                break;
+            if (sc.hasNextInt()) {
+                sum = sum + sc.nextInt();
+            } else  {
+                if (sc.hasNextLine()) {
+                    String line = sc.nextLine();
+                    if (line.equals("ENTER")) {
+                        System.out.println("Sum of numbers is: " + sum);
+                        break;
+                    }
+                    else {
+                        System.out.println("Invalid input");
+                    }
+                }
+
             }
-            sum += Integer.parseInt(s);
         }
         sc.close();
     }
