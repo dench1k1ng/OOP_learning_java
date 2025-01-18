@@ -2,9 +2,6 @@ package Assignment_3_interfaces;
 
 public class Solution_6 {
     public static void main(String[] args) throws Exception {
-        Screen screen = new Screen();
-        screen.onSelect();
-        screen.refresh();
     }
     interface Selectable {
         void onSelect();
